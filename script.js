@@ -9,12 +9,12 @@
 // ==/UserScript==
 (function(){
 document.addEventListener('keydown', function(e) {
-  // pressed alt+g
+  // pressed e
   if (e.keyCode == 84) {
-   gameeUI.gameStart();
-  gameeUI.gamePause();
-  gameeUI.updateScore(prompt("Insert your desired score"));
-  gameeUI.gameOver();
+   gameeUI.gameStart(); //game start
+  gameeUI.gamePause(); //the game is paused so it won't automatically close itself and you won't be able to lose
+  gameeUI.updateScore(prompt("Insert your desired score")); //send the score to the server
+  gameeUI.gameOver(); //close the game as we don't need it anymore
   }
 }, false);
 })();
